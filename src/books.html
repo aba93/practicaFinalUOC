@@ -1,0 +1,29 @@
+<div ng-controller="booksCtrl" data-ng-init="getBooks()">
+
+<div ng-hide="flag.dataLoaded">
+    <img class="preloader" src="img/preloader.gif"/>
+</div>
+
+<div ng-show="flag.dataLoaded" class="books-cont">
+    <h1>Libros</h1>
+    <div class="list-group books" >
+        <div ng-repeat="book in books track by $index">
+            <div class="media">
+                <a ui-sref="header.book({bookId: {{book.id}}})" class="list-group-item">
+                    <div class="media-left" >
+                        <img src="{{book.cover}}"/>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{book.title}}</h4>
+                        <h4 class="media-heading"><span class="label label-info  price">{{book.price}} €	</span></h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="centered">
+        <button type="button" class="btn btn-primary load-button" ng-click="getMoreBooks()" ng-hide="checkPage()">Cargar más libros</button>
+    </div>
+</div>
+
+</div>

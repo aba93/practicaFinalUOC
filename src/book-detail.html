@@ -1,0 +1,42 @@
+<div ng-controller="bookDetailCtrl">
+<div ng-hide="flag.dataLoaded">
+    <img class="preloader" src="img/preloader.gif"/>
+</div>
+
+
+<div ng-show="flag.dataLoaded" >
+    <h1>Detalle Libro</h1>
+    <div class="book-detail" ng-controller="bookDetailCtrl">
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <img src="{{imagen}}"/>
+            </li>
+            <li class="list-group-item">
+                <h3>Título</h3>
+                <p>{{titulo}}</p>
+            </li>
+            <li class="list-group-item">
+                <h3>Autor</h3>
+                <p>{{autor}}</p>
+            </li>
+            <li class="list-group-item">
+                <h3>ISBN</h3>
+                <p>{{isbn}}</p>
+            </li>
+            <li class="list-group-item">
+                <h3>Reseña</h3>
+                <p class="review" ng-bind-html="review"></p>
+            </li>
+            <li class="list-group-item"><h3>Cantidad</h3>
+                <input type="number" name="cantidad" ng-model="cantidad" min="1" step="1">
+                <button type="button" class="btn btn-primary" ng-click="addBook()">Añadir</button></li>
+        </ul>
+        <div ng-show="added" class="alert alert-success">
+            Libro añadido a pedido
+        </div>
+    </div>
+
+
+</div>
+</div>

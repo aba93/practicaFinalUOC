@@ -1,0 +1,18 @@
+
+<div ng-controller="mainCtrl">
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header" ng-hide="inDetail">
+        <a class="navbar-brand" ui-sref="header.menu"><span class="glyphicon glyphicon-home"></span> Menú principal</a>
+    </div>
+
+    <div class="navbar-header" ng-show="inDetail">
+        <a class="navbar-brand" ui-sref="header.books"><span class="glyphicon glyphicon-chevron-left"></span> Atrás</a>
+    </div>
+
+    <div class="nav navbar-nav navbar-right">
+        <a class="navbar-brand" ui-sref="header.order"><span class="glyphicon glyphicon-shopping-cart"></span> Pedido</a>
+    </div>
+</nav>
+<div ui-view class="app-container"></div>
+
+</div>
