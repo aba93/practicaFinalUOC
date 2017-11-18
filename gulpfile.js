@@ -13,7 +13,7 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify');
 
 
-// Definición de direcotrios origen
+// Definición de directorios origen
 var srcPaths = {
     images:   'src/img/',
     scripts:  'src/js/',
@@ -120,9 +120,8 @@ gulp.task('js', ['lint'], function() {
 gulp.task('serve', ['html', 'imagemin', 'css', 'js'], function() {
     browserSync.init({
         logLevel: "info",
-        browser: ["google chrome"],
         proxy: "localhost:80",
-        startPath: "/PFINAL/dist/"
+        startPath: "/practicaFinalUOC/dist/"
     });
 
     gulp.watch(srcPaths.files+'*.html', ['html']);

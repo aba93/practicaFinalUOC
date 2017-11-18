@@ -1,11 +1,11 @@
-.menu img{
-  width:400px;
+.menu img {
+  width: 400px;
   height: 200px;
   border-radius: 25px;
   margin: 20px;
 }
 
-.menu{
+.menu {
   padding-top: 5%;
 }
 .menu img:hover {
@@ -13,104 +13,97 @@
   filter: alpha(opacity=40);
 }
 
-.menu div{
+.menu div {
   text-align: center;
 }
 
-.menu div{
+.menu div {
   float: left;
   margin: 0 auto;
 }
 
-.disconnect{
-  float:right;
+.disconnect {
+  float: right;
 }
-h1{
+h1 {
   text-align: center;
 }
-h2{
+h2 {
   text-align: center;
 }
 
-
-.login{
+.login {
   text-align: center;
   padding-top: 5%;
 }
 
-.login{
-
+.login {
 }
 
-.login-form{
+.login-form {
   width: 200px;
   margin: auto;
 }
 
 //Books
-.books img{
+.books img {
   text-align: left;
   width: 70px;
   height: 100px;
 }
-.books .price{
+.books .price {
   font-size: 20px;
-
 }
 
-
-
-.load-button{
+.load-button {
   margin: 5%;
 }
 
-
-.book-detail{
+.book-detail {
   text-align: center;
   margin-bottom: 15%;
 }
-.book-detail .review{
+.book-detail .review {
   text-align: justify;
 }
 
-.books-cont{
+.books-cont {
   margin-bottom: 15%;
 }
-.books{
+.books {
   max-width: 700px;
-  margin:auto;
-
+  margin: auto;
 }
 
-.book-detail .list-group{
+.book-detail .list-group {
   max-width: 500px;
-  margin:auto;
+  margin: auto;
 }
-.book-detail img{
+.book-detail img {
   width: 200px;
   height: 300px;
 }
 
-.preloader{
+.preloader {
   display: block;
   margin: 20% auto;
 }
 
-.details-order{
-  margin-top:5%;
+.details-order {
+  margin-top: 5%;
   text-align: center;
 }
 
-.media-heading{
+.media-heading {
   text-align: center;
-  margin: 3%
+  margin: 3%;
 }
 
-.price{
+.price {
   text-align: center;
 }
 
-.centered{
+.centered {
   text-align: center;
   margin: 3%;
 }

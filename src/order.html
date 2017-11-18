@@ -2,37 +2,46 @@
     <h1>Detalle pedido</h1>
 
 
-        <div ng-hide="flag.dataLoaded">
-            <img class="preloader" src="img/preloader.gif"/>
-        </div>
+    <div ng-hide="flag.dataLoaded">
+        <img class="preloader" src="img/preloader.gif" />
+    </div>
 
-        <div ng-show="flag.dataLoaded" >
-            <div class="list-group books">
-                <div ng-repeat="order in orders track by $index">
+    <div ng-show="flag.dataLoaded">
+        <div class="list-group books">
+            <div ng-repeat="order in orders track by $index">
 
-                    <div class="media">
-                        <div class="list-group-item">
-                            <div class="media-left" >
-                                <img src="{{order.imagen}}"/>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">{{order.titulo}}</h4>
-                                <h4 class="media-heading"><span class="label label-info  price">Precio {{order.precio}} €	</span></h4>
-                                <h4 class="media-heading"><span class="label label-default  price">Subtotal {{order.precioTotal}} €</span></h4>
-                                <h4 class="media-heading"><span>Cantidad</span> <input type="number" name="cantidad" ng-model="order.cantidad" min="1" step="1"></h4>
-                            </div>
-
+                <div class="media">
+                    <div class="list-group-item">
+                        <div class="media-left">
+                            <img src="{{order.imagen}}" />
                         </div>
-
-                    </div>
-                    <div class="centered">
-                        <button type="button" class="btn btn-danger" ng-click="deleteBook(order.id)">Eliminar</button>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{order.titulo}}</h4>
+                            <h4 class="media-heading">
+                                <span class="label label-info  price">Precio {{order.precio}} € </span>
+                            </h4>
+                            <h4 class="media-heading">
+                                <span class="label label-default  price">Subtotal {{order.precioTotal}} €</span>
+                            </h4>
+                            <h4 class="media-heading">
+                                <span>Cantidad</span>
+                                <input type="number" name="cantidad" ng-model="order.cantidad" min="1" step="1">
+                            </h4>
+                        </div>
                     </div>
                 </div>
-                <h4 class="media-heading"><span class="label label-success  price"> Total {{total}} €</span></h4>
+
+                <div class="centered">
+                    <button type="button" class="btn btn-danger" ng-click="deleteBook(order.id)">Eliminar</button>
+                </div>
 
             </div>
+            <h4 class="media-heading">
+                <span class="label label-success  price"> Total {{total}} €</span>
+            </h4>
+
         </div>
+    </div>
 
 
 
