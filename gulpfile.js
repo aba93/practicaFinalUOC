@@ -119,9 +119,9 @@ gulp.task('js', ['lint'], function() {
  */
 gulp.task('serve', ['html', 'imagemin', 'css', 'js'], function() {
     browserSync.init({
-        logLevel: "info",
-        proxy: "localhost:80",
-        startPath: "/practicaFinalUOC/dist/"
+        //logLevel: "info",
+        //proxy: "localhost:3000",
+        server: "./dist/"
     });
 
     gulp.watch(srcPaths.files+'*.html', ['html']);

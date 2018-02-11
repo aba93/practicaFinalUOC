@@ -26,7 +26,7 @@ angular.module("App").controller("orderCtrl", [
     logged.dataLoaded = false;
 
     $scope.checkLocalStorage = function() {
-      if ($localStorage.user == undefined && $localStorage.pass == undefined) {
+      if ($localStorage.user === undefined && $localStorage.pass === undefined) {
         $state.go("login");
       }
 
@@ -81,7 +81,7 @@ angular.module("App").controller("orderCtrl", [
     };
 
     $scope.getOrder = function() {
-      if (localStorage.getItem("pedidoId") != null) {
+      if (localStorage.getItem("pedidoId") !== null) {
         idBooks = JSON.parse(localStorage.getItem("pedidoId"));
         quantity = JSON.parse(localStorage.getItem("pedidoCantidad"));
         cont = quantity;

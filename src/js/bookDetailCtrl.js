@@ -59,7 +59,7 @@ angular.module("App").controller("bookDetailCtrl", [
     }
 
     $scope.addBook = function() {
-      if (localStorage.getItem("pedidoId") != null) {
+      if (localStorage.getItem("pedidoId") !== null) {
         idBooks = JSON.parse(localStorage.getItem("pedidoId"));
         quantity = JSON.parse(localStorage.getItem("pedidoCantidad"));
 
@@ -67,7 +67,7 @@ angular.module("App").controller("bookDetailCtrl", [
         var inOrder = idBooks.indexOf(id) > -1;
 
         //Si existe, se añade al existente
-        if (inOrder == true) {
+        if (inOrder === true) {
           var pos = idBooks.indexOf(id);
           quantity[pos] = quantity[pos] + $scope.cantidad;
         } else {
