@@ -22,7 +22,7 @@ angular.module("App").controller("booksCtrl", [
         $localStorage.email !== undefined &&
         $localStorage.userkey !== undefined
       ) {
-        $state.go("tabs.players");
+        $state.go("login");
       }
     };
 
